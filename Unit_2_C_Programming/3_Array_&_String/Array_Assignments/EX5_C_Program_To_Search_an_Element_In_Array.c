@@ -12,7 +12,7 @@
 
 int main (){
 	float A[100],x;
-	int i,j=10,n;
+	int i,j=10,m=0,n;
 	printf("Enter no of elements :\n ");
 	fflush(stdin);
 	fflush(stdout);
@@ -28,8 +28,11 @@ fflush(stdin);
 fflush(stdout);
 scanf("%f",&x);
 for(i=0;i<n;i++){
-	if(A[i]==x)printf("Number found at the location : %d \n",i+1);
+	if(A[i]==x){
+		printf("Number found at the location : %d \n",i+1);
+		m++;
+	}
 }
-printf("the element not found \n ");
+if(m==0) printf("the element not found \n ");
 	return 0;
 	}
